@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
+
+
+html,
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: black;
+  color: var(--color-main);
+  scroll-behavior: smooth;
+  font-family: "Mona Sans", sans-serif;
+}
+
+.main-text {
+  background: rgba(0, 0, 0, .3);
+}
+
+@theme {
+  --color-main: #668a93;
+  --color-main-light: #90dff3;
+}
+
+
+.navWrapper {
+  ul {
+
+    li {
+      @apply relative overflow-hidden;
+
+      .underline {
+        @apply absolute bottom-0 left-[-100%] w-full h-0.5 duration-200 ease-in-out;
+
+      }
+      &:hover
+        {
+          .main-item_text {
+            @apply text-main-light duration-200 ease-in-out;
+
+
+          }
+          .underline{
+            @apply bg-main-light left-0;
+          }
+
+        }
+    }
+  }
+}
+
+.downAnimation {
+
+    animation: myAnimation 2s ease-in infinite ;
+
+    &:nth-child(2) {
+      animation-delay: calc(2s/3);
+    }
+
+    &:nth-child(3) {
+      animation-delay: calc((2s/3)*2);
+    }
+
+
+}
+@keyframes myAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
