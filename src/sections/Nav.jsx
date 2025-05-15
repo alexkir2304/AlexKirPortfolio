@@ -2,7 +2,7 @@ import React from 'react';
 
 const Nav = () => {
     return (
-        <div className='absolute top-0 w-full z-20'>
+        <nav className='absolute top-0 w-full z-20'>
             <div className="navWrapper w-4/6 mx-auto mt-10 ">
 
                 <ul className='flex justify-between'>
@@ -16,7 +16,7 @@ const Nav = () => {
                         </a>
                     </li>
                     <li key={'2'} >
-                        <a href="#" >
+                        <a href="#work" >
                             <span className='main-item_text'>
                                 WORK
                             </span>
@@ -46,7 +46,7 @@ const Nav = () => {
 
 
             </div>
-        </div>
+        </nav>
     );
 };
 

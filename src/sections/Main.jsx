@@ -10,7 +10,7 @@ const Main = () => {
                         <Main3DModel/>
                 </div>
 
-                <div className='main-text_wrapper w-full h-svh absolute z-10'>
+                <header className='main-text_wrapper w-full h-svh absolute z-10'>
                     <div className="main-text flex flex-col justify-center h-svh  z-10">
                         <div
                             className="main-text_name flex justify-center lg:text-8xl md:text-6xl text-4xl font-thin text-center">
@@ -21,7 +21,7 @@ const Main = () => {
                             CREATIVE | TECHNOLOGIST | DEVELOPER
                         </div>
                     </div>
-                </div>
+                </header>
 
                 <div className="scrollDownAnimation">
                     <ScrollDown/>

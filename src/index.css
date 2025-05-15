@@ -19,6 +19,10 @@ body {
 @theme {
   --color-main: #668a93;
   --color-main-light: #90dff3;
+  --color-main-bg: #61585e;
+  --color-main-bgText: #efe9e4;
+
+
 }
 
 
@@ -29,7 +33,7 @@ body {
       @apply relative overflow-hidden;
 
       .underline {
-        @apply absolute bottom-0 left-[-100%] w-full h-0.5 duration-200 ease-in-out;
+        @apply absolute bottom-0 left-[50%] w-0 h-0.5 duration-200 ease-in-out;
 
       }
       &:hover
@@ -40,7 +44,7 @@ body {
 
           }
           .underline{
-            @apply bg-main-light left-0;
+            @apply bg-main-light left-0 w-full;
           }
 
         }
@@ -61,6 +65,7 @@ body {
     }
 
 
+
 }
 @keyframes myAnimation {
   0% {
@@ -72,4 +77,34 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.myProjectsWrapper {
+  .projectCard  {
+    .projectCard-wrapper {
+      @apply overflow-hidden z-30 duration-200 ease-in-out;
+
+      transform-style: preserve-3d;
+
+
+
+      .projectCard-wrapper_bg {
+          @apply absolute top-0 w-full z-40 h-0 bg-main-bg duration-200 ease-in-out opacity-55
+        }
+
+      &:hover {
+        /*transform: rotateX(15deg) rotateY(15deg) ;*/
+        /*scale: 1.05;*/
+        @apply text-main-light rotate-x-[15deg] rotate-y-[15deg] scale-115 ;
+
+        .projectCard-wrapper_bg {
+          @apply h-full text-main-bgText
+        }
+
+      }
+    }
+
+  }
+
+
 }
