@@ -46,7 +46,7 @@ const skills = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/html-css.png',
         imgScale: 10,
-        imgTop: 200,
+        imgTop: 1,
     },
     {
         name: 'Javascript',
@@ -54,7 +54,7 @@ const skills = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/javascript.png',
         imgScale: 5,
-        imgTop: 300,
+        imgTop: 25,
     },
     {
         name: 'React',
@@ -62,7 +62,7 @@ const skills = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/react.png',
         imgScale: 60,
-        imgTop: 400,
+        imgTop: 50,
     },
     {
         name: 'Tailwind CSS',
@@ -70,7 +70,7 @@ const skills = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/tailwindcss.png',
         imgScale: 60,
-        imgTop: 500,
+        imgTop: 720,
     },
     {
         name: 'Next.js',
@@ -86,7 +86,7 @@ const skills = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/threejs.png',
         imgScale: 10,
-        imgTop: 700,
+        imgTop: 1170,
     },
     {
         name: 'GSAP',
@@ -94,7 +94,7 @@ const skills = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/gsap.png',
         imgScale: 60,
-        imgTop: 600,
+        imgTop: 1400,
     },
 
 ]

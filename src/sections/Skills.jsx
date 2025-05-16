@@ -17,25 +17,29 @@ const Skills = () => {
     return (
         <section id='skills'>
             <div className="skillsWrapper w-full flex justify-end mt-10 ">
-                <div className="skillsContent w-5/6 flex gap-10" >
+                <div className="skillsContent w-5/6 flex gap-30" >
 
-                    <div className="timeline relative w-1/6 mt-10 flex justify-center  ">
+                    <div className="timeline relative lg:w-1/12 md:w-1/6 w-1/4 mt-10 flex justify-center  ">
                         {/*<div className="timelineShadow w-full h-full"></div>*/}
                         <div className="timelineGradient  h-full rounded-full ">
 
                         </div>
 
-                        {/*{skills.map((skill, index) => (*/}
+                        <div className='absolute h-full flex flex-col justify-around'>
+
+                            {skills.map((skill, index) => (
+
+                                <div key={index}>
+                                    <div className='overflow-hidden rounded-full  '>
+                                        <img  src={skill.imagePath} alt="img"/>
+                                    </div>
+                                </div>
+                            ))}
+
+                        </div>
 
 
-                        {/*    <div key={index} className={`absolute  translate-y-[${skill.imgTop}px]`}>*/}
-                        {/*        <div className='overflow-hidden rounded-full  '>*/}
-                        {/*            <img  src={skill.imagePath} alt="img"/>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
 
-
-                        {/*))}*/}
 
                         {/*<div className={` absolute translate-y-[800px]`}>*/}
                         {/*    <div className='overflow-hidden rounded-full z-20 '>*/}
