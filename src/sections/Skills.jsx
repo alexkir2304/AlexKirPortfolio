@@ -1,5 +1,5 @@
-import React, {useEffect, useRef} from 'react';
-import {skills} from '../../src/constants/index.js'
+import React from 'react';
+import {skills} from '../constants/index.js'
 
 
 // const card =
@@ -9,6 +9,10 @@ import {skills} from '../../src/constants/index.js'
 
 const Skills = () => {
 
+
+    const testArr = [
+        734, 467, 653, 373,  234, 878, 834, 834
+    ]
 
     return (
         <section id='skills'>
@@ -20,23 +24,24 @@ const Skills = () => {
                         <div className="timelineGradient  h-full rounded-full ">
 
                         </div>
-                        {skills.map((skill) => (
+
+                        {/*{skills.map((skill, index) => (*/}
 
 
-                            <div key={skill.name} className={`skillCard-icon absolute  translate-y-[${skill.imgTop+'px'}] `}>
-                                <div className='overflow-hidden rounded-full  '>
-                                    <img  src={skill.imagePath} alt="img"/>
-                                </div>
-                            </div>
+                        {/*    <div key={index} className={`absolute  translate-y-[${skill.imgTop}px]`}>*/}
+                        {/*        <div className='overflow-hidden rounded-full  '>*/}
+                        {/*            <img  src={skill.imagePath} alt="img"/>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
 
 
-                        ))}
+                        {/*))}*/}
 
-                        <div className={`skillCard-icon absolute translate-y-[700px]`}>
-                            <div className='overflow-hidden rounded-full z-20 '>
-                                <img className='w-full h-full' src='../../public/images/skills/nextjs.png' alt="img"/>
-                            </div>
-                        </div>
+                        {/*<div className={` absolute translate-y-[800px]`}>*/}
+                        {/*    <div className='overflow-hidden rounded-full z-20 '>*/}
+                        {/*        <img className='w-full h-full' src='../../images/skills/nextjs.png' alt="img"/>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
 
 
 
