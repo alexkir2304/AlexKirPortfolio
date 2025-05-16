@@ -26,61 +26,42 @@ const MyPortfolio = () => {
                     <div className="myProjectsWrapper  flex w-full flex-wrap ">
 
                         {
-                            projects.map((project) => (
+                            projects.map((project, index) => (
 
-                                    <a href={project.href} className="projectCard lg:w-1/2 w-full mt-10 flex justify-center">
+                                    <a key={index} href={project.href} className="projectCard lg:w-1/2 w-full mt-10 flex justify-center">
                                         <div className="projectCard-wrapper relative w-2/3 flex flex-col justify-around items-center rounded-xl">
-                                            <div className="projectCard-wrapper_bg overflow-hidden flex justify-center  items-center ">
+                                            <div className="projectCard-wrapper_backside overflow-hidden flex justify-center  items-center ">
 
-                                                <div
-                                                    className=" flex flex-col justify-around items-center mb-20 text-3xl gap-2">
-                                                    {project.techStack.map((tech) => (
-                                                        <span>{tech}</span>
+                                                <ul className=" flex flex-col justify-around items-center  text-3xl gap-2">
+                                                    <span>Developed using:</span>
+
+                                                    {project.techStack.map((tech, index) => (
+
+                                                        <li key={tech[index]}>{tech}</li>
                                                     ))}
-                                                </div>
+                                                </ul>
+
                                             </div>
-                                            <img className='w-1/2 ' src={project.image} alt="image"/>
-                                            <span className='w-5/6 text-center'>
+
+                                            <div className='projectCard-wrapper_frontside flex flex-col justify-center  items-center'>
+                                                <img className='w-1/2 ' src={project.image} alt="image"/>
+                                                <span className='w-5/6 text-center'>
                                                 {project.description}
-                                            </span>
+                                                </span>
+                                            </div>
+
                                         </div>
                                     </a>
-
                                 )
                             )
-
                         }
-
-
-                        {/*<a href='#' className="projectCard lg:w-1/2 w-full mt-10 flex justify-center">*/}
-                        {/*    <div*/}
-                        {/*        className="projectCard-wrapper relative w-2/3 flex flex-col justify-around items-center rounded-xl">*/}
-                        {/*        <div*/}
-                        {/*            className="projectCard-wrapper_bg overflow-hidden flex justify-center  items-center ">*/}
-
-                        {/*            <div className=" flex flex-col justify-around items-center mb-20 text-3xl gap-2">*/}
-                        {/*                <span>GSAP</span>*/}
-                        {/*                <span>Next.js</span>*/}
-                        {/*                <span>THREE.js</span>*/}
-                        {/*            </div>*/}
-                        {/*        </div>*/}
-                        {/*        <img className='w-1/2 ' src="../../public/images/img_1.png" alt="image"/>*/}
-                        {/*        <span className='w-5/6 text-center'>*/}
-                        {/*        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, asperiores eius facere iusto nemo sapiente.*/}
-                        {/*        </span>*/}
-                        {/*    </div>*/}
-                        {/*</a>*/}
-
                     </div>
 
                 </div>
 
-
             </section>
 
         </>
-
-
     );
 };
 

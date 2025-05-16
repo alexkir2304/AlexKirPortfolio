@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 
 html,
 body {
@@ -17,14 +22,15 @@ body {
 }
 
 @theme {
-  --color-main: #668a93;
-  --color-main-light: #90dff3;
-  --color-main-bg: #61585e;
-  --color-main-bgText: #efe9e4;
-
+  /*--color-main: #668a93;*/
+  --color-main: #90dff3;
+  /*--color-main-light: #90dff3;*/
+  --color-main-light: #eef5f7;
+  --color-portfolio-bg: #514747;
+  --color-portfolio-bgText: #efe9e4;
+  --color-skills-bg: #091518;
 
 }
-
 
 .navWrapper {
   ul {
@@ -87,24 +93,39 @@ body {
       transform-style: preserve-3d;
 
 
-
-      .projectCard-wrapper_bg {
-          @apply absolute top-0 w-full z-40 h-0 bg-main-bg duration-200 ease-in-out opacity-55
+      .projectCard-wrapper_backside {
+          @apply absolute top-0 w-full z-40 h-full bg-portfolio-bg rotate-y-[180deg] duration-400 ease-in-out   rounded-lg backface-hidden;
         }
 
-      &:hover {
-        /*transform: rotateX(15deg) rotateY(15deg) ;*/
-        /*scale: 1.05;*/
-        @apply text-main-light rotate-x-[15deg] rotate-y-[15deg] scale-115 ;
+      .projectCard-wrapper_frontside {
+        @apply   duration-400 ease-in-out backface-hidden;
+      }
 
-        .projectCard-wrapper_bg {
-          @apply h-full text-main-bgText
+      &:hover {
+
+        @apply text-main-light;
+
+        .projectCard-wrapper_backside {
+          @apply  rotate-y-[360deg] text-portfolio-bgText w-4/5 ;
+        }
+
+        .projectCard-wrapper_frontside {
+          @apply rotate-y-[180deg]  ;
         }
 
       }
     }
-
   }
+}
 
-
+.timelineGradient {
+  width: 10px;
+  background: linear-gradient(
+          0deg,
+          rgba(69, 222, 196, 0) 0%,
+          #62e0ff 25%,
+          #52aeff 37.51%,
+          #fd5c79 62.83%,
+          #6d45ce 92.91%
+  );
 }

@@ -25,7 +25,7 @@ const Nav = () => {
                         </a>
                     </li>
                     <li key={'3'} >
-                        <a href="#" >
+                        <a href="#skills" >
                             <span className='main-item_text'>
                                 SKILLS
                             </span>
