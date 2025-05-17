@@ -29,7 +29,8 @@ body {
   --color-portfolio-bg: #514747;
   --color-portfolio-bgText: #efe9e4;
   --color-skills-bg: #091518;
-
+  --color-contacts-bg: #101016;
+  --color-input-bg: #58586d;
 }
 
 @utility myTranslateY-* {

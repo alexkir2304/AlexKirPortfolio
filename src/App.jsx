@@ -4,6 +4,7 @@ import Nav from "./sections/Nav.jsx";
 import ScrollDown from "./components/ScrollDown.jsx";
 import MyPortfolio from "./sections/MyPortfolio.jsx";
 import Skills from "./sections/Skills.jsx";
+import Contacts from "./sections/Contacts.jsx";
 
 
 
@@ -14,6 +15,7 @@ const App = () => {
             <Main/>
             <MyPortfolio/>
             <Skills/>
+            <Contacts/>
 
         </>
     );

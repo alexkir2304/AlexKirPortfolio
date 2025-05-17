@@ -1,15 +1,59 @@
 import React from 'react';
 import {projects} from '/src/constants/index.js'
+import gsap from 'gsap';
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const MyPortfolio = () => {
+
+   useGSAP(() => {
+       gsap.fromTo('.aboutMe-wrapper span',
+           {
+               opacity: 0,
+               y: 30,
+           }, {
+               opacity: 1,
+               y: 0,
+               duration: 1,
+               stagger: 0.3,
+               ease: 'power2.inOut',
+               scrollTrigger: {
+                   trigger: '.aboutMe-wrapper',
+                   start: 'top 80%'
+               }
+           }
+       );
+
+       gsap.utils.toArray('.projectCard').forEach((card, index) => {
+           gsap.fromTo(card, {
+                    x: (index%2 === 1) ? 800 : -800,
+               } ,
+               {
+                   x: 0,
+                   duration: 1,
+                   stagger: 0.3,
+                   ease: 'power2.inOut',
+                   scrollTrigger: {
+                       trigger: card,
+                       start: 'top 60%'
+                   }
+               }
+
+           )
+       })
+
+   })
+
+
     return (
         <>
             {/*text about me*/}
             <section id='work'>
                 
-                <div className="aboutMe w-full">
-                    <div className="aboutMe-wrapper w-1/2 flex flex-col gap-5 m-15">
+                <div className="aboutMe w-full flex justify-center">
+                    <div className="aboutMe-wrapper w-1/2 flex flex-col gap-5 m-15 text-center">
                         <span className='text-4xl'>
                             Hi, i am Alex, a developer based in Moscow city.
                         </span>

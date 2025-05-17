@@ -1,8 +1,45 @@
 import React from 'react';
 import Main3DModel from "../components/models/Main3dModel.jsx";
 import ScrollDown from "../components/ScrollDown.jsx";
+import {useGSAP} from "@gsap/react";
+import gsap from 'gsap';
+
 
 const Main = () => {
+
+
+    useGSAP(() => {
+
+
+
+        gsap.fromTo('.main-text',
+            {
+                opacity: 0,
+                y:50,
+            },
+            {
+                opacity: 1,
+                y:0,
+                duration: 3,
+                ease: 'power2.inOut',
+            }
+        );
+
+        gsap.fromTo('.mainwrapper div',
+            {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                duration: 3,
+                ease: 'power2.inOut',
+            }
+        )
+
+
+
+    })
+
+
     return (
         <section>
             <div className="mainwrapper w-full h-svh">

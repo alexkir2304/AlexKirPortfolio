@@ -50,7 +50,7 @@ const skills = [
     },
     {
         name: 'Javascript',
-        progress: 80,
+        progress: 60,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/javascript.png',
         imgScale: 5,
@@ -58,7 +58,7 @@ const skills = [
     },
     {
         name: 'React',
-        progress: 80,
+        progress: 40,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/react.png',
         imgScale: 60,
@@ -66,7 +66,7 @@ const skills = [
     },
     {
         name: 'Tailwind CSS',
-        progress: 80,
+        progress: 60,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/tailwindcss.png',
         imgScale: 60,
@@ -74,7 +74,7 @@ const skills = [
     },
     {
         name: 'Next.js',
-        progress: 80,
+        progress: 20,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/nextjs.png',
         imgScale: 50,
@@ -82,7 +82,7 @@ const skills = [
     },
     {
         name: 'THREE.js',
-        progress: 80,
+        progress: 10,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/threejs.png',
         imgScale: 10,
@@ -90,7 +90,7 @@ const skills = [
     },
     {
         name: 'GSAP',
-        progress: 80,
+        progress: 30,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt doloribus facere id libero optio perspiciatis?',
         imagePath: 'images/skills/gsap.png',
         imgScale: 60,
