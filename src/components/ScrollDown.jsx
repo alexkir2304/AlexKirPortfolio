@@ -7,7 +7,7 @@ const ScrollDown = () => {
                 <div className="scrolldown-text text-center">
                     {/*MY PROJECTS*/}
                 </div>
-                <div className="scrollDown-animation w-1/12 m-auto">
+                <div className="scrollDown-animation lg:w-1/12 w-1/6 m-auto">
                     <div className='relative'>
                         <svg className='downAnimation absolute bottom-[8.5svh] ' xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 500 100" scale={0.1}>

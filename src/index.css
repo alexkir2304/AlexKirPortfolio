@@ -37,29 +37,71 @@ body {
   transform: translateY(var(--myTranslateY));
 }
 
-.navWrapper {
-  ul {
+.nav {
+  @apply fixed flex justify-center items-center top-0 w-full z-20 py-10 bg-black;
 
-    li {
-      @apply relative overflow-hidden;
+  &.not-Scrolled {
+    @apply  bg-transparent;
 
-      .underline {
-        @apply absolute bottom-0 left-[50%] w-0 h-0.5 duration-200 ease-in-out;
+  }
 
-      }
-      &:hover
+  &.scrolled {
+    @apply top-0 ;
+
+  }
+
+  .navWrapper {
+    @apply  w-4/6 mx-auto ;
+
+    ul {
+      @apply flex md:flex-row flex-col justify-between items-end;
+
+      li {
+        @apply relative overflow-hidden md:mt-0 mt-2;
+
+        .underline {
+          @apply absolute bottom-0 left-[50%] w-0 h-0.5 duration-200 ease-in-out;
+
+        }
+        &:hover
         {
           .main-item_text {
             @apply text-main-light duration-200 ease-in-out;
 
-
           }
           .underline{
             @apply bg-main-light left-0 w-full;
+
           }
 
         }
+      }
     }
+  }
+}
+
+.mainWrapper {
+  @apply w-full h-svh;
+
+  .modelWrapper {
+    @apply w-full h-svh absolute z-1;
+  }
+
+  .main-textWrapper {
+    @apply w-full h-svh absolute z-10;
+
+    .main-text {
+      @apply flex flex-col justify-center h-svh  z-10;
+
+      .main-text_name {
+        @apply flex justify-center lg:text-8xl md:text-6xl text-4xl font-thin text-center;
+
+      }
+      .main-text_describe {
+        @apply lg:mt-10 mt-4 flex justify-center font-thin tracking-[1.6dvw] text-center;
+      }
+    }
+
   }
 }
 
@@ -74,10 +116,8 @@ body {
     &:nth-child(3) {
       animation-delay: calc((2s/3)*2);
     }
-
-
-
 }
+
 @keyframes myAnimation {
   0% {
     opacity: 1;
