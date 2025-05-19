@@ -65,11 +65,11 @@ const Main = ({isEnglish, count, onClick}) => {
                     </div>
                 </button>
 
-                <div className="modelWrapper ">
+                <div className="modelWrapper absolute z-30">
                         <Main3DModel/>
                 </div>
 
-                <header className='main-textWrapper '>
+                <div  onClick={(e) => e.stopPropagation()} className='main-textWrapper '>
                     <div className="main-text ">
                         <div
                             className="main-text_name ">
@@ -80,7 +80,7 @@ const Main = ({isEnglish, count, onClick}) => {
                             {isEnglish ? textContent.main.description.eng : textContent.main.description.rus}
                         </div>
                     </div>
-                </header>
+                </div>
 
                 <div className="scrollDownAnimation">
                     <ScrollDown/>

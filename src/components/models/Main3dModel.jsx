@@ -8,8 +8,8 @@ const Main3DModel = () => {
         <Canvas camera={{position: [0,0,15], fov: 12}}>
 
 
-            <ambientLight intensity={0.2} color='#1a1a40'/>
-            <directionalLight position={[5, 5, 5]} intensity={4} color='pink'/>
+            {/*<ambientLight intensity={0.2} color='#1a1a40'/>*/}
+            <directionalLight position={[5, 5, 5]} intensity={40} color='pink'/>
 
             <OrbitControls
                 // enablePan={false}
@@ -19,6 +19,7 @@ const Main3DModel = () => {
                 // maxPolarAngle={Math.PI / 2}
                 // minPolarAngle={Math.PI / 5}
                 autoRotate={true}
+                enableZoom={false}
 
                 // dampingFactor={0.03}
             />

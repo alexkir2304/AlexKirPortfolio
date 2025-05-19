@@ -38,10 +38,10 @@ body {
 }
 
 .nav {
-  @apply fixed flex justify-center items-center top-0 w-full z-20 py-10 bg-black;
+  @apply fixed flex justify-center items-center top-0 w-full z-50 py-5 bg-black;
 
   &.not-Scrolled {
-    @apply  bg-transparent;
+
 
   }
 
@@ -84,14 +84,17 @@ body {
   @apply w-full h-svh;
 
   .modelWrapper {
-    @apply w-full h-svh absolute z-1;
+    opacity: 0.3 !important;
+    @apply w-full h-svh absolute ;
   }
 
   .main-textWrapper {
     @apply w-full h-svh absolute z-10;
 
     .main-text {
-      @apply flex flex-col justify-center h-svh  z-10;
+      position: relative;
+      z-index: 99999;
+      @apply flex flex-col justify-center h-svh  ;
 
       .main-text_name {
         @apply flex justify-center lg:text-8xl md:text-6xl text-4xl font-thin text-center;
