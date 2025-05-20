@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Canvas} from "@react-three/fiber";
-import {OrbitControls, useScroll} from "@react-three/drei";
+import {OrbitControls} from "@react-three/drei";
 import {Orb} from "./Fractured_orb.jsx";
 
 const Main3DModel = () => {
@@ -21,17 +21,15 @@ const Main3DModel = () => {
         const calculatedWidth = card2.getBoundingClientRect().width;
 
 
-        const element = my3dModel.current;
+        const  handleMousemove = (e) => {
+            const coordsDiffX = (e.clientX - calculatedWidth/2)/500;
+            const coordsDiffY = (e.clientY - calculatedHeight/2)/300;
 
-        function handleMousemove (e) {
-            const coordsDiffX = (e.clientX - calculatedWidth/2)/10000;
-            const coordsDiffY = (e.clientY - calculatedHeight/2)/10000;
-
-                 setXpos(-coordsDiffX)
+                 setXpos(coordsDiffX)
                  setYpos(coordsDiffY)
-
         }
 
+        const element = my3dModel.current;
         element.addEventListener("mousemove", handleMousemove);
 
     },[]);
@@ -39,31 +37,22 @@ const Main3DModel = () => {
 
     return (
 
-        <div ref={my3dModel}   className='model w-full h-full'>
+        <div ref={my3dModel}
+             style={{
+                    transform: `translateY(${-ypos}%) translateX(${-xpos}%)`,
+             }}
+             className='model absolute w-full h-full'>
             <Canvas  className='model' camera={{position: [0,0,15], fov: 12}} >
 
                 {/*<ambientLight intensity={0.2} color='#1a1a40'/>*/}
                 <directionalLight position={[5, 5, 5]} intensity={40} color='pink'/>
 
                 <OrbitControls
-                    // enablePan={false}
-                    // enableZoom={!isTablet}
-                    maxDistance={20}
-                    minDistance={5}
-                    // maxPolarAngle={Math.PI / 2}
-                    // minPolarAngle={Math.PI / 5}
                     autoRotate={true}
                     enableZoom={false}
                 />
 
-                <group
-                    // scale={1}
-                    position={[xpos, ypos, 0]}
-
-                >
                     <Orb/>
-                </group>
-
 
             </Canvas>
         </div>

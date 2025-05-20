@@ -22,7 +22,7 @@ const Contacts = ({isEnglish}) => {
             </a>
 
 
-            <span className='text-4xl mt-5'>
+            <span className='text-4xl mt-5 text-center'>
                 {isEnglish ? textContent.contacts.text1.eng : textContent.contacts.text1.rus}
             </span>
             <span className='text-2xl mt-2' >
@@ -36,19 +36,31 @@ const Contacts = ({isEnglish}) => {
                 <div className="contactsForm  ">
                     <form action="" className='flex flex-col gap-3'>
                         <div className='flex flex-col gap-2 '>
-                            <label htmlFor="">Your name</label>
+                            <label htmlFor="">
+                                <span >
+                            {isEnglish ? textContent.contacts.text4.eng : textContent.contacts.text4.rus}
+                                </span>
+                            </label>
                             <input type="text" className='bg-input-bg p-2 rounded-md'/>
                         </div>
                         <div className='flex flex-col gap-3'>
-                            <label htmlFor="">Your Email</label>
-                            <input type="e-mail" className='bg-input-bg p-2 rounded-md' />
+                            <label htmlFor="">
+                                <span >
+                            {isEnglish ? textContent.contacts.text5.eng : textContent.contacts.text5.rus}
+                                </span>
+                            </label>
+                            <input type="e-mail" className='bg-input-bg p-2 rounded-md'/>
                         </div>
                         <div className='flex flex-col gap-3'>
-                            <label htmlFor="">Your message</label>
+                            <label htmlFor="">
+                                <span >
+                            {isEnglish ? textContent.contacts.text6.eng : textContent.contacts.text6.rus}
+                                </span>
+                            </label>
                             <textarea className='bg-input-bg p-2 rounded-md h-[30vh]'/>
                         </div>
                         <button type='submit' className='bg-input-bg p-2 rounded-md w-1/3 m-auto cursor-pointer'>
-                            Submit
+                        Submit
                         </button>
                     </form>
                 </div>

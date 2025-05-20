@@ -238,7 +238,20 @@ const textContent = {
         text3: {
             rus: 'Email: alexkir2304@gmail.com.',
             eng: 'Email: alexkir2304@gmail.com.'
+        },
+        text4: {
+            rus: 'Ваше имя',
+            eng: 'Your name.'
+        },
+        text5: {
+            rus: 'Ваш Email.',
+            eng: 'Your Email.'
+        },
+        text6: {
+            rus: 'Ваше сообщение.',
+            eng: 'Your message.'
         }
+
 
     },
 

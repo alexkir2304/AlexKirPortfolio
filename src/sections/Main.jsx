@@ -48,11 +48,6 @@ const Main = ({isEnglish,  onClick}) => {
 
     }, []);
 
-
-
-
-
-
     return (
         <section>
             <div className="mainWrapper relative">
@@ -67,7 +62,7 @@ const Main = ({isEnglish,  onClick}) => {
                     </div>
                 </button>
 
-                <div className="modelWrapper absolute z-30">
+                <div className="modelWrapper relative z-30">
                         <Main3DModel/>
                 </div>
 
