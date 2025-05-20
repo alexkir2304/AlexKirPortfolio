@@ -5,7 +5,7 @@ import {useGSAP} from "@gsap/react";
 import gsap from 'gsap';
 import {textContent} from "../constants/index.js";
 
-const Main = ({isEnglish, count, onClick}) => {
+const Main = ({isEnglish,  onClick}) => {
 
     useGSAP(() => {
 
@@ -35,18 +35,20 @@ const Main = ({isEnglish, count, onClick}) => {
 
     const dotWrapperRef = useRef(null);
 
-    const [height, setHeight] = useState()
+    const [height, setHeight] = useState(null)
 
     useEffect(() => {
         const card = dotWrapperRef.current;
 
         const coords = card.getBoundingClientRect().height
-         setHeight(coords);
 
-        console.log(height)
+        setHeight(coords);
+
+
+
     }, []);
 
-    console.log(height)
+
 
 
 
@@ -55,7 +57,7 @@ const Main = ({isEnglish, count, onClick}) => {
         <section>
             <div className="mainWrapper relative">
 
-                <button onClick={onClick} className='absolute top-1 lg:w-[7%] md:w-[13%] w-1/6 right-7 z-50 cursor-pointer'>
+                <button onClick={onClick} className='fixed  top-1 lg:w-[7%] md:w-[13%] w-1/6 right-7 z-50 cursor-pointer'>
                     <div className='flex justify-around  w-full gap-1'>
                         <span>EN</span>
                         <div ref={dotWrapperRef} className='dotWrapper relative rounded-full w-[12vw] border-2 border-main flex  duration-200 ease-in-out'>

@@ -225,6 +225,22 @@ const textContent = {
         }
 
     },
+    contacts:{
+
+        text1: {
+            rus: 'Есть вопросы или предложения? Давайте пообщаемся!',
+            eng: 'Have questions or ideas? Let\'s talk!'
+        },
+        text2: {
+            rus: 'Телефонный номер: +7-925-943-0423.',
+            eng: 'Phone number: +7-925-943-0423.'
+        },
+        text3: {
+            rus: 'Email: alexkir2304@gmail.com.',
+            eng: 'Email: alexkir2304@gmail.com.'
+        }
+
+    },
 
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
+import {textContent} from "../constants/index.js";
 
-const Contacts = () => {
+const Contacts = ({isEnglish}) => {
     return (
         <div id='contacts' className='contactsWrapper relative w-full flex flex-col items-center mt-20 mb-20 text-white'>
             <a href="#" className='absolute bottom-5 right-2 rotate-180 w-1/6 scale-x-40'>
@@ -21,13 +22,16 @@ const Contacts = () => {
             </a>
 
 
-            <div className="text-4xl">
-                Have questions or ideas? Let's talk!
-            </div>
-            <div className="mt-5 flex flex-col gap-2">
-                <span>My phone number: +7-925-943-0423.</span>
-                <span>My Email: alexkir2304@gmail.com.</span>
-            </div>
+            <span className='text-4xl mt-5'>
+                {isEnglish ? textContent.contacts.text1.eng : textContent.contacts.text1.rus}
+            </span>
+            <span className='text-2xl mt-2' >
+                {isEnglish ? textContent.contacts.text2.eng : textContent.contacts.text2.rus}
+            </span>
+            <span className='text-2xl mt-2'>
+                {isEnglish ? textContent.contacts.text3.eng : textContent.contacts.text3.rus}
+            </span>
+
             <div className="contactsForm-wrapper lg:w-1/3 w-2/3 mt-10 p-5 bg-contacts-bg rounded-2xl">
                 <div className="contactsForm  ">
                     <form action="" className='flex flex-col gap-3'>
