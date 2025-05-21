@@ -12,25 +12,23 @@ const Main3DModel = () => {
 
     useEffect(() => {
 
-        const card = my3dModel.current;
+            const card = my3dModel.current;
 
-        const calculatedHeight = card.getBoundingClientRect().height;
-        console.log(calculatedHeight + 'calculatedHeight');
+            const calculatedHeight = card.getBoundingClientRect().height;
 
-        const card2 = my3dModel.current;
-        const calculatedWidth = card2.getBoundingClientRect().width;
+            const card2 = my3dModel.current;
+            const calculatedWidth = card2.getBoundingClientRect().width;
 
+            const  handleMousemove = (e) => {
+                const coordsDiffX = (e.clientX - calculatedWidth/2)/500;
+                const coordsDiffY = (e.clientY - calculatedHeight/2)/300;
 
-        const  handleMousemove = (e) => {
-            const coordsDiffX = (e.clientX - calculatedWidth/2)/500;
-            const coordsDiffY = (e.clientY - calculatedHeight/2)/300;
+                setXpos(coordsDiffX)
+                setYpos(coordsDiffY)
+            }
 
-                 setXpos(coordsDiffX)
-                 setYpos(coordsDiffY)
-        }
-
-        const element = my3dModel.current;
-        element.addEventListener("mousemove", handleMousemove);
+            const element = my3dModel.current;
+            element.addEventListener("mousemove", handleMousemove);
 
     },[]);
 
@@ -41,7 +39,8 @@ const Main3DModel = () => {
              style={{
                     transform: `translateY(${-ypos}%) translateX(${-xpos}%)`,
              }}
-             className='model absolute w-full h-full'>
+             className='model absolute w-full h-full'
+        >
             <Canvas  className='model' camera={{position: [0,0,15], fov: 12}} >
 
                 {/*<ambientLight intensity={0.2} color='#1a1a40'/>*/}

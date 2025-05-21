@@ -44,8 +44,6 @@ const Main = ({isEnglish,  onClick}) => {
 
         setHeight(coords);
 
-
-
     }, []);
 
     return (
